@@ -15,6 +15,16 @@ Clone this repository to your machine:
 git clone https://github.com/BuyerQuest/vault-recursive-delete.git
 ```
 
+### Using Docker
+
+The Ruby script has been containerized and is accessible via the command `docker-compose run vrd --help`.
+
+To delete all the secrets at `secret/foo/`, run the following command:
+
+`docker-compose run -e VAULT_ADDR=http://127.0.0.1:8200 -e VAULT_TOKEN=your_token vrd --path=secret/foo/`
+
+### Using Local Ruby
+
 Enter the directory and run `bundle install`:
 
 ```shell
